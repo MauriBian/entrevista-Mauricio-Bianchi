@@ -14,7 +14,7 @@ const Model = mongoose.model('CreditCard', schema)
 
 module.exports = {
 
-  async addNewCreditCard ({userId, cardToken, brandType, maskedNumber}) {
+  async addNewCreditCard ({ userId, cardToken, brandType, maskedNumber }) {
     try {
       const creditCard = {
         _id: new mongoose.Types.ObjectId(),
@@ -51,12 +51,9 @@ module.exports = {
 
       return userCreditCards
 
-      
     } catch (error) {
        throw new ApiErrors('Internal server error', 500)
     }
-
-
 
   }
   
