@@ -49,9 +49,6 @@ module.exports = {
         userId
       })
 
-      if (!userExists) {
-        throw new ApiErrors('The user is not registered in the application', 404)
-      } 
       const userCreditCards = await Model.find({
         userId
       })
@@ -60,9 +57,6 @@ module.exports = {
 
       
     } catch (error) {
-       if (error instanceof ApiErrors) {
-         throw error
-       }
        throw new ApiErrors('Internal server error', 500)
     }
 
