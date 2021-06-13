@@ -15,10 +15,10 @@ router.post('/creditcard', async (req, res, next) => {
   try {
     creditCardController.addNewCreditCard(req.body)
     res.status(200)
-    res.send('The credit card was added correctly')
+    res.send('Credit card was added correctly')
   } catch (error) {
-    res.status(500)
-    res.send('Internal server error')
+    res.status(error.status)
+    res.send(error.message)
   }
 
 })
@@ -32,13 +32,13 @@ router.get('/creditcard', async (req, res, next) => {
   }
 
   try {
-    creditCardController.getUserCreditCards(req.query.userId)
+    const result = await creditCardController.getUserCreditCards(req.query.userId)
     res.status(200)
-    res.send('The credit card was added correctly')  
+    res.json(result)
 
   } catch (error) {
-    res.status(500)
-    res.send('Internal server error')
+    res.status(error.status)
+    res.send(error.message)
   }
 
 })

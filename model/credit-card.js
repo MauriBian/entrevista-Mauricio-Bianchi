@@ -1,5 +1,5 @@
-const { addNewCreditCard } = require('../controllers/credit-card')
 const { mongoose } = require('./db')
+const ApiErrors = require('../errors/errors')
 
 const schema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
@@ -39,8 +39,35 @@ module.exports = {
       return 'Credit card added'
   
     } catch (error) {
-      throw new Error(error)
+      throw new ApiErrors('Internal server error', 500)
     }
+  },
+
+  async getUserCreditCards (userId) {
+    try {
+      const userExists = await Model.findOne({
+        userId
+      })
+
+      if (!userExists) {
+        throw new ApiErrors('The user is not registered in the application', 404)
+      } 
+      const userCreditCards = await Model.find({
+        userId
+      })
+
+      return userCreditCards
+
+      
+    } catch (error) {
+       if (error instanceof ApiErrors) {
+         throw error
+       }
+       throw new ApiErrors('Internal server error', 500)
+    }
+
+
+
   }
   
 }

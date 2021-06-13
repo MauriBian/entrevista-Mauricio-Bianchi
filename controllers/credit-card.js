@@ -6,7 +6,7 @@ module.exports = {
       const result = creditCardModel.addNewCreditCard(creditCard)
       return result
     } catch (error) {
-      throw new Error(error)
+      throw error
     }
   },
 
@@ -15,7 +15,7 @@ module.exports = {
       const result = creditCardModel.getUserCreditCards(userId)
       return result
     } catch (error) {
-      throw new Error(error)
+      throw error
     }
   }
 
