@@ -9,7 +9,7 @@ const app = express()
 app.use(bodyParser.json())
 
 const server = app.listen(port, function () {
-  console.log(`HTTP server listening on *:${port}`)
+  console.log(`Server listening on *:${port}`)
 })
 
 app.use('/', creditCardRoutes)
