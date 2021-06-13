@@ -45,10 +45,6 @@ module.exports = {
 
   async getUserCreditCards (userId) {
     try {
-      const userExists = await Model.findOne({
-        userId
-      })
-
       const userCreditCards = await Model.find({
         userId
       })
