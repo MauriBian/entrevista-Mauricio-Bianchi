@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const config = require('../config')
-const creditCardRoutes = require('../routes/credit-card')
+const creditCardRoutes = require('./credit-card')
 
 const port = config.api.port || 3000
 
