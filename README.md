@@ -6,10 +6,8 @@
 Copiar y pegar el archivo **.env.sample**, cambiarle el nombre a **.env** y configurar las variables de entorno . Por ejemplo
 
 ``
-# General configuration
 API_PORT=8080
 
-# Mongo DB configuration
 DB_URI=mongodb://user:password@localhost:27017/credit-card?authSource=admin
 ``
 
