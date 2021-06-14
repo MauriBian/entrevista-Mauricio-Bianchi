@@ -19,7 +19,7 @@ $ node app.js
 
 ## Ejemplos de uso de los endponts
 
-POST localhost:[Puerto]/creditcard
+### POST URL:[PORT]/creditcard
 
 Body 
 
@@ -38,7 +38,7 @@ Response
 Credit card was added correctly
 ```
 
- GET localhost:[Puerto]/creditcard?userId=[id_usuario]
+ ### GET URL:[PORT]/creditcard?userId=[userId]
 
 Response
 
