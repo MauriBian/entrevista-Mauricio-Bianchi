@@ -4,19 +4,18 @@
 
 Copiar y pegar el archivo **.env.sample**, cambiarle el nombre a **.env** y configurar las variables de entorno . Por ejemplo
 
-``
+```
 API_PORT=8080
-
 DB_URI=mongodb://user:password@localhost:27017/credit-card?authSource=admin
-``
+```
 
 ## Ejecutar la aplicación
 
 En el root de la aplicación ejecutar el siguiente comando
 
-``
+```
 $ node app.js
-``
+```
 
 ## Ejemplos de uso de los endponts
 
@@ -24,20 +23,20 @@ $ node app.js
 
 Body 
 
-``
+```
 {
   "userId": "432542352",
   "cardToken": "dk3122dcvdd-44pp43zmn",
   "brandType": "master card",
   "maskedNumber": "******4111"
 }
-``
+```
 
 Response 
 
-``
+```
 Credit card was added correctly
-``
+```
 
 ** GET localhost:[Puerto]/creditcard?userId=[id_usuario] **
 
