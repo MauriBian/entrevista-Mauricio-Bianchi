@@ -1,7 +1,6 @@
 # entrevista-Mauricio-Bianchi
-## Ejercicio NodeJS + Express + MongoDB
 
-### Configuración
+## Configuración
 
 Copiar y pegar el archivo **.env.sample**, cambiarle el nombre a **.env** y configurar las variables de entorno . Por ejemplo
 
@@ -11,7 +10,7 @@ API_PORT=8080
 DB_URI=mongodb://user:password@localhost:27017/credit-card?authSource=admin
 ``
 
-### Ejecutar la aplicación
+## Ejecutar la aplicación
 
 En el root de la aplicación ejecutar el siguiente comando
 
@@ -19,7 +18,7 @@ En el root de la aplicación ejecutar el siguiente comando
 $ node app.js
 ``
 
-### Ejemplos de uso de los endponts
+## Ejemplos de uso de los endponts
 
 **POST localhost:[Puerto]/creditcard**
 
@@ -44,7 +43,7 @@ Credit card was added correctly
 
 Response
 
-``
+```
 [
     {
         "_id": "60c741d4dfc60c2e50a1491f",
@@ -65,5 +64,5 @@ Response
         "__v": 0
     }
 ]
-``
+```
 
